@@ -1,7 +1,7 @@
 import {
   AUTH_ADMIN,
   UNAUTH_ADMIN,
-} from '../actions/actionTypes';
+} from 'actions/actionTypes';
 
 const initialValues = {
   authenticated: true,

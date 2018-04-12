@@ -14,9 +14,6 @@ export const configure = () => {
     window.devToolsExtension ? window.devToolsExtension() : f => f,
   ));
 
-  store.subscribe(() =>
-    localStorage.setItem('reduxState', JSON.stringify(store.getState())),
-  );
-
+  store.subscribe(() => localStorage.setItem('reduxState', JSON.stringify(store.getState())));
   return store;
 };

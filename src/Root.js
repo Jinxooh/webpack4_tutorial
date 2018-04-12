@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import App from 'components/App';
 
-import store from './store';
-import { history } from './store/configureStore';
+import store from 'store';
+import { history } from 'store/configureStore';
 
 const Root = () => (
   <Provider store={store}>
