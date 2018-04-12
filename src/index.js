@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { ConnectedRouter, push } from 'react-router-redux';
+import Root from './Root';
 
 import './style/main.scss';
 
 ReactDOM.render(
-  <div>hello</div>,
+  <Root />,
   document.getElementById('app'),
 );
-
-module.hot.accept();
