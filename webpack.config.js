@@ -57,7 +57,7 @@ module.exports = {
       path.resolve(__dirname, './src/components/common'),
       path.resolve(__dirname, './src/components/auth'),
       path.resolve(__dirname, './src/components/modal'),
-    ], 
+    ],
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
@@ -80,6 +80,7 @@ module.exports = {
       warnings: true,
       errors: true,
     },
+    historyApiFallback: true, // refresh problem at deep routes
   },
   optimization: {
     minimize: true,
