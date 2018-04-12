@@ -1,0 +1,282 @@
+.header {
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: $header-bg;
+  height: $header-height;
+  border-bottom: 3px solid $primary;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  flex-direction: row;
+  display: flex;
+  .header-logo {
+    border-radius: 25px;
+    align-self: center;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    margin-left: 20px; margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img { width: 24px; height: 24px; }
+  }
+  .header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-back-button {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+  }
+  .header-project {
+    display: flex;
+    align-items: center;
+
+  }
+  .header-project-title {
+    font-size: 18px;
+  }
+  .header-bottom {
+    margin-bottom: -4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 34px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+
+    .header-item {
+      color: #eee;
+      border-radius: 0;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      width: inherit;
+      height: 34px;
+      padding: 0 10px;
+      margin-left: 5px; margin-right: 5px;
+      border-bottom: 3px solid transparent;
+      p { margin-left: 5px; font-weight: lighter; }
+      &.selected {
+        color: #fff;
+        i { color: #009EF1; }
+        // border-radius: 5px 5px 0 0;
+        // border: 1px 1px 0 1px solid white;
+        border-bottom: 3px solid $primary-light;
+      }
+    }
+  }
+  .header-right {
+    display: flex;
+    button { background-color: rgba(0, 0, 0, 0); display: flex; align-items: center;}
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    button {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      font-size: 12px;
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-top: 155px;
+      margin-left: -30px;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+  }
+}
+
+.apple-loading-spinner {
+  margin-top: 26px;
+  margin-right: 25px;
+  float: right;
+  font-size: 26px;
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+}
+.apple-loading-spinner.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.apple-loading-spinner .apple-loading-spinner-blade {
+  position: absolute;
+  left: 0.4629em;
+  bottom: 0;
+  width: 0.074em;
+  height: 0.2777em;
+  border-radius: 0.0555em;
+  background-color: transparent;
+  -webkit-transform-origin: center -0.2222em;
+      -ms-transform-origin: center -0.2222em;
+          transform-origin: center -0.2222em;
+  -webkit-animation: apple-loading-spinner-fade 1s infinite linear;
+          animation: apple-loading-spinner-fade 1s infinite linear;
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(2) {
+  -webkit-animation-delay: 0.083s;
+          animation-delay: 0.083s;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(3) {
+  -webkit-animation-delay: 0.166s;
+          animation-delay: 0.166s;
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(4) {
+  -webkit-animation-delay: 0.249s;
+          animation-delay: 0.249s;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(5) {
+  -webkit-animation-delay: 0.332s;
+          animation-delay: 0.332s;
+  -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(6) {
+  -webkit-animation-delay: 0.415s;
+          animation-delay: 0.415s;
+  -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(7) {
+  -webkit-animation-delay: 0.498s;
+          animation-delay: 0.498s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(8) {
+  -webkit-animation-delay: 0.581s;
+          animation-delay: 0.581s;
+  -webkit-transform: rotate(210deg);
+      -ms-transform: rotate(210deg);
+          transform: rotate(210deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(9) {
+  -webkit-animation-delay: 0.664s;
+          animation-delay: 0.664s;
+  -webkit-transform: rotate(240deg);
+      -ms-transform: rotate(240deg);
+          transform: rotate(240deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(10) {
+  -webkit-animation-delay: 0.747s;
+          animation-delay: 0.747s;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(11) {
+  -webkit-animation-delay: 0.83s;
+          animation-delay: 0.83s;
+  -webkit-transform: rotate(300deg);
+      -ms-transform: rotate(300deg);
+          transform: rotate(300deg);
+}
+.apple-loading-spinner .apple-loading-spinner-blade:nth-child(12) {
+  -webkit-animation-delay: 0.913s;
+          animation-delay: 0.913s;
+  -webkit-transform: rotate(330deg);
+      -ms-transform: rotate(330deg);
+          transform: rotate(330deg);
+}
+
+@-webkit-keyframes apple-loading-spinner-fade {
+  0% {
+    background-color: #69717d;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes apple-loading-spinner-fade {
+  0% {
+    background-color: #69717d;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+//
+// /* Smartphones */
+// @media only screen and (min-width: 320px) {
+//   .header {
+//     left: 0px;
+//   }
+// }
+//
+// /* Tablets (portrait) */
+// @media only screen and (min-width: 768px) {
+//   .header {
+//     left: 230px;
+//   }
+// }

@@ -1,0 +1,21 @@
+.summary-container {
+  .title {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $oc-gray-5;
+    padding: 5px 0;
+    
+    h1 {
+      flex: 1;
+      color: $oc-gray-5;
+    }
+  }
+  .quotes {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    border: 1px $oc-blue-5 solid;
+    border-radius: 4px;
+    background: $oc-blue-1;
+  }
+}

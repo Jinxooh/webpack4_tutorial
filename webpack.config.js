@@ -36,7 +36,11 @@ module.exports = {
     ],
   },
   resolve: {
-    modules: ['node_modules', 'src'], // able 'import xxx from 'src/something'
+    modules: [
+      'node_modules', 'src',
+      path.resolve(__dirname, './app/components/common'),
+      path.resolve(__dirname, './app/components/auth'),
+    ], // able 'import xxx from 'src/something'
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [

@@ -1,0 +1,66 @@
+.intent {
+  display: flex;
+  margin-top: 74px;
+  margin-left: 230px;
+  padding: 40px;
+  flex-direction: column;
+  .intent-section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    .intent-section-title {
+      margin-bottom: 10px;
+    }
+    .intent-section-triggers-container {
+      display: flex;
+      flex-direction: column;
+
+      .intent-section-trigger {
+        min-height: 44px;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+        flex-direction: row;
+        border: 1px solid #ddd;
+        background-color: #fdfdfd;
+        border-radius: 2px;
+        padding: 2px;
+        margin: 2px 0;
+        .intent-section-trigger-item {
+          // display: flex;
+          // flex-wrap: wrap;
+          display: block;
+          min-width: 10px;
+          // width: inherit;
+          padding: 5px 7px;
+          background-color: #3DB98A;
+          border-radius: 15.5px;
+          margin: 2px 5px;
+          &.new {
+            background-color: transparent;
+          }
+          textarea {
+            display: block;
+            box-sizing: padding-box;
+            overflow: hidden;
+            color: white;
+            min-height: 0; min-width: 0; width: auto; padding: 0;
+            background-color: transparent;
+            border: 0 solid transparent;
+          }
+        }
+        button {
+          color: red;
+          display: flex;
+          align-items: center;
+        }
+        input {
+          border-radius: 2px;
+          width: 400px;
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+}

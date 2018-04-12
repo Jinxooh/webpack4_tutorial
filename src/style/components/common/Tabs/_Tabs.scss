@@ -1,0 +1,55 @@
+.tab-list {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $oc-gray-5;
+  .tab {
+    margin-bottom: -1px;
+    a {
+      display: block;
+      padding: 4px 15px;
+      border: 1px solid $oc-gray-5;
+      border-radius: 4px 4px 0 0;
+      background: $oc-gray-3;
+      
+      &.selected {
+        border-bottom-color: transparent;
+        background: white;
+        border-top: 3px solid $oc-blue-5;
+        padding: 2px 15px 4px;
+        transition: all .15s ease-in;
+      }
+    }
+    & + div {
+      margin-left: 3px;
+    }
+  }
+}
+
+.tab-panel {
+  display: none;
+  border: 1px solid $oc-gray-5;
+  border-top: none;
+  padding: 15px 25px;
+
+  &.selected {
+    display: block;
+  }
+
+  table {
+    border: transparent;
+    th {
+      background: $oc-gray-3;
+      text-transform: capitalize;
+    }
+    td {
+      &.True {
+        font-weight: 700;
+        color: $oc-teal-5;
+      }
+      &.False {
+        font-weight: 700;
+        color: $oc-red-5;
+      }
+    }
+  }
+}

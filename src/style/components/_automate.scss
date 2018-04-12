@@ -1,0 +1,119 @@
+.automate {
+  // margin-left: 230px;
+  margin-top: 74px;
+  padding: 20px 40px;
+
+  .top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .buttons-container {
+      align-items: center;
+      display: flex;
+      i {
+        margin-left: 5px;
+        font-size: 12px;
+      }
+      button {
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .new {
+        color: white;
+        background-color: $primary;
+        border: 1px solid darken($primary, 20%);
+        margin-right: 10px;
+      }
+      .actions {
+        background-color: $color-background;
+        border: 1px solid darken($color-background, 20%);
+      }
+    }
+  }
+
+
+  .filter-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-light-gray;
+    background-color: $color-background;
+    border-radius: 3px;
+    padding: 5px 10px;
+    .input-container {
+      flex: 1;
+      display: flex;
+      background-color: white;
+      align-items: center;
+      padding: 0 5px;
+      border-radius: 5px;
+      border: 1px solid $color-light-gray;
+      .filter-item {
+        display: flex;
+        align-items: center;
+        background-color: $color-background;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 3px 5px;
+        .title { font-size: 13px; font-weight: normal; color: #333; }
+        .divider { padding: 0 2px; }
+        .value { font-size: 13px; font-weight: lighter; color: #999; }
+        button { background-color: transparent; display: flex; align-items: center; margin: 0; padding: 0; }
+        i { font-size: 15px; }
+      }
+      input { border: 0; margin: 0 5px; }
+      i { margin: 0 5px; }
+    }
+    .nav-container {
+      padding: 0 3px;
+      i { margin: 0 2px; }
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .automate-title-section {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    h2 {
+      color: #000;
+      font-weight: lighter;
+      font-size: 30px;
+    }
+    button {
+      color: $primary;
+      margin: 0; padding: 0;
+      margin-left: 14px;
+      background-color: transparent;
+    }
+  }
+  .automate-intent-name {
+    background-color: transparent;
+    color: $primary;
+    margin: 0; padding: 0;
+  }
+
+  table {
+    text-align: left;
+    border: 0 solid transparent;
+    tbody {
+      // &:hover {
+      //   background-color: transparent;
+      // }
+    }
+    tr {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    th, td {
+      padding: 10px;
+    }
+    th {
+      border-bottom: 1px solid #666;
+    }
+    td {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}

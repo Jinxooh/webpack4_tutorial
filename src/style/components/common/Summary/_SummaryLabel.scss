@@ -1,0 +1,20 @@
+.summary-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+  .label-name {
+    flex: 0.3;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.3rem 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .label-data {
+    flex: 0.7;
+    display: flex;
+    padding: 0.3rem 1rem;
+  }
+}

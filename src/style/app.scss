@@ -1,0 +1,32 @@
+@import "base/variables";
+
+// external
+@import "external/switch";
+@import "external/lib/all";
+
+@import "screen/all";
+// shared components
+@import "components/automate";
+@import "components/card";
+@import "components/chatrooms";
+@import "components/dashboard";
+@import "components/global";
+@import "components/side-bar";
+@import "components/Collapsible";
+@import "components/form";
+@import "components/group-chats";
+@import "components/header";
+@import "components/intent";
+@import "components/search-filter";
+@import "components/pagination";
+@import "components/projects";
+@import "components/project-dashboard";
+@import "components/property";
+@import "components/modal";
+@import "components/table";
+@import "components/login";
+@import "components/tool-box";
+@import "components/user-profile";
+@import "components/user-detail";
+@import "components/common/all";
+// @import "external/foundation.min.css";
