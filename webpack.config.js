@@ -33,14 +33,31 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader',
+        options: {
+          name: '[hash].[ext]',
+          limit: 10000,
+        },
+      },
     ],
   },
   resolve: {
     modules: [
-      'node_modules', 'src',
-      path.resolve(__dirname, './app/components/common'),
-      path.resolve(__dirname, './app/components/auth'),
-    ], // able 'import xxx from 'src/something'
+      'node_modules', 'src', // able 'import xxx from 'src/something'
+      path.resolve(__dirname, './src/assets'),
+      path.resolve(__dirname, './src/actions'),
+      path.resolve(__dirname, './src/helpers'),
+      path.resolve(__dirname, './src/components'),
+      path.resolve(__dirname, './src/components/common'),
+      path.resolve(__dirname, './src/components/auth'),
+      path.resolve(__dirname, './src/components/modal'),
+    ], 
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
