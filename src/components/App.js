@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Loadable from 'helpers/Loadable';
+// import Loadable from 'react-loadable';
 
 import Navigation from 'Navigation';
 import Login from 'Login';
@@ -11,11 +13,6 @@ import Campaigns from 'screens/CampaignsScreen';
 import Channels from 'screens/ChannelsScreen';
 import Chatrooms from 'screens/ChatroomsScreen';
 import Clients from 'screens/ClientsScreen';
-import Credentials from 'screens/Credentials';
-import CredentialsUsers from 'screens/CredentialsUsers';
-import CredentialsGroups from 'screens/CredentialsGroups';
-import CredentialsRoles from 'screens/CredentialsRoles';
-import Dashboard from 'screens/Dashboard';
 import Projects from 'screens/projectsScreen';
 import ProjectBusiness from 'screens/ProjectBusinessScreen';
 import ProjectDashboard from 'screens/ProjectDashboardScreen';
@@ -31,19 +28,43 @@ import CredentialsRoleSummary from 'screens/CredentialsRoleSummaryScreen';
 import CredentialsGroupSummary from 'screens/CredentialsGroupSummaryScreen';
 import CredentialsUserSummary from 'screens/CredentialsUserSummaryScreen';
 
+const AsyncDashboard = Loadable({
+  loader: () => import(/* webpackChunkName: "Dashboard" */ 'screens/Dashboard'),
+});
+
+const AsyncCredentials = Loadable({
+  loader: () => import(/* webpackChunkName: "Credentials" */ 'screens/Credentials'),
+});
+
+const AsyncCredentialsUsers = Loadable({
+  loader: () => import(/* webpackChunkName: "CredentialsUsers" */ 'screens/CredentialsUsers'),
+});
+
+const AsyncCredentialsGroups = Loadable({
+  loader: () => import(/* webpackChunkName: "CredentialsGroups" */ 'screens/CredentialsGroups'),
+});
+
+const AsyncCredentialsRoles = Loadable({
+  loader: () => import(/* webpackChunkName: "CredentialsRoles" */ 'screens/CredentialsRoles'),
+});
+
+const AsyncProjects = Loadable({
+  loader: () => import(/* webpackChunkName: "CredentialsRoles" */ 'screens/projectsScreen'),
+});
+
 const App = () => (
   <div>
     <Route exact path="/login" component={Login} />
     <Route path="/" component={Navigation} />
     <Route path="/" component={Modal} />
-    <Route path="/credentials" component={Credentials} />
+    <Route path="/credentials" component={AsyncCredentials} />
     <Switch>
-      <Route exact path="/" component={Dashboard} />
+      <Route exact path="/" component={AsyncDashboard} />
       <Route exact path="/apis" component={Apis} />
-      <Route exact path="/credentials/users" component={CredentialsUsers} />
-      <Route exact path="/credentials/groups" component={CredentialsGroups} />
-      <Route exact path="/credentials/roles" component={CredentialsRoles} />
-      <Route exact path="/projects" component={Projects} />
+      <Route exact path="/credentials/users" component={AsyncCredentialsUsers} />
+      <Route exact path="/credentials/groups" component={AsyncCredentialsGroups} />
+      <Route exact path="/credentials/roles" component={AsyncCredentialsRoles} />
+      <Route exact path="/projects" component={AsyncProjects} />
       <Route exact path="/project/:projectId/automate" component={Automate} />
       <Route exact path="/project/:projectId/automate/intent/:intentId" component={Intent} />
       <Route exact path="/project/:projectId/automate/flow/:flowId" component={Flow} />

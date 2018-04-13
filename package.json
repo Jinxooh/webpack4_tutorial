@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "minimize": "webpack-dev-server --config ./webpack.config.js --mode production --progress --optimize-minimize --display-modules"
+    "minimize": "webpack-dev-server --config ./webpack.config.js --mode production --progress --optimize-minimize --display-modules",
+    "build": "webpack"
   },
   "babel": {
     "presets": [
@@ -18,6 +19,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -48,6 +50,7 @@
     "open-color": "^1.6.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-loadable": "^5.3.1",
     "react-localization": "^1.0.8",
     "react-redux": "^5.0.7",
     "react-rnd": "^7.4.0",
