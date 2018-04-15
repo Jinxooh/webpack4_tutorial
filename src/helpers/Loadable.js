@@ -9,7 +9,7 @@ const Loadable = opts =>
   L({
     loading: Loading,
     dealy: 300,
-    ...opts,
+    loader: () => opts,
   });
 
 export default Loadable;
