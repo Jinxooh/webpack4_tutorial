@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import {
   // auth
   UNAUTH_ADMIN,

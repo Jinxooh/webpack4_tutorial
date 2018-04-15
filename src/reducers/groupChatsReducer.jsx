@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import uniqBy from 'lodash/uniqBy';
 import {
   // auth
   UNAUTH_ADMIN,
@@ -50,8 +50,8 @@ export const groupChatsReducer = (state = initialValues, action) => {
     case ADD_GROUP_CHATROOMS:
       return Object.assign({}, state, { [payload.type]: payload.items, [`${payload.type}Meta`]: payload.itemsMeta });
     case ADD_GROUP_CHATS:
-      if (payload.isOldItems) return Object.assign({}, state, { [payload.type]: _.uniqBy(payload.items.concat(state[payload.type]), 'uid'), meta: Object.assign({}, state.meta, { isMoreDataAvailable: payload.items.length === 30 }) });
-      return Object.assign({}, state, { [payload.type]: _.uniqBy(state[payload.type].concat(payload.items), 'uid'), meta: Object.assign({}, state.meta, { isMoreDataAvailable: payload.items.length === 30 }) });
+      if (payload.isOldItems) return Object.assign({}, state, { [payload.type]: uniqBy(payload.items.concat(state[payload.type]), 'uid'), meta: Object.assign({}, state.meta, { isMoreDataAvailable: payload.items.length === 30 }) });
+      return Object.assign({}, state, { [payload.type]: uniqBy(state[payload.type].concat(payload.items), 'uid'), meta: Object.assign({}, state.meta, { isMoreDataAvailable: payload.items.length === 30 }) });
     case UPDATE_ITEM_IN_GROUP_CHATS:
       return Object.assign({}, state, { [payload.type]: state[payload.type].slice(0, payload.index).concat([payload.item], state[payload.type].slice(payload.index + 1, state[payload.type].length)) });
     case UPDATE_ITEM_IN_GROUP_CHATROOMS:

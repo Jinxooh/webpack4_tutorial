@@ -22,15 +22,9 @@ import {
   Flow,
   Dashboard,
   Credentials,
-  CredentialsUsers,
-  CredentialsGroups,
-  CredentialsRoles,
-  CredentialsAddUser,
-  CredentialsCreateGroup,
-  CredentialsCreateRole,
-  CredentialsRoleSummary,
-  CredentialsGroupSummary,
-  CredentialsUserSummary,
+  CredentialsUsers, CredentialsGroups, CredentialsRoles,
+  CredentialsAddUser, CredentialsCreateGroup, CredentialsCreateRole,
+  CredentialsRoleSummary, CredentialsGroupSummary, CredentialsUserSummary,
 } from 'screens';
 
 const App = () => (
