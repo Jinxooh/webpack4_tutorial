@@ -1,4 +1,4 @@
-import Loadable from 'helpers/Loadable';
+import Loadable from 'lib/Loadable';
 
 export const Apis = Loadable(import(/* webpackChunkName: "Apis" */ 'screens/ApisScreen'));
 export const Automate = Loadable(import(/* webpackChunkName: "Automate" */ 'screens/AutomateScreen'));
