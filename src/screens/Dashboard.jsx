@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import actions from 'actions';
-
+import withLocale from 'libs/hoc/withLocale';
 class Dashboard extends Component {
   renderProject(project) {
     return (
@@ -31,18 +31,23 @@ class Dashboard extends Component {
     );
   }
   render() {
-    const { projects } = this.props;
+    const { projects, localize } = this.props;
+    const {
+      learnMore, documentataion, supports, welcomeTitle, welcomeSubTitle,
+    } = localize;
+    // console.log(localize.getLanguage());
+
     const actionItems = [
-      { icon: 'lightbulb_outline', title: 'Learn more' },
-      { icon: 'view_headline', title: 'Documentation' },
-      { icon: 'chat_bubble_outline', title: 'Supports' },
+      { icon: 'lightbulb_outline', title: learnMore },
+      { icon: 'view_headline', title: documentataion },
+      { icon: 'chat_bubble_outline', title: supports },
     ];
     return (
       <div className="projects" style={{ minHeight: window.innerHeight - 74 }}>
         <div className="projects-container">
           <div className="projects-info">
-            <h1>Welcome to SDN Console!</h1>
-            <p>Tools from Standard Networks for developing great apps, engaging with your users and earning more through mobile ads.</p>
+            <h1>{welcomeTitle}</h1>
+            <p>{welcomeSubTitle}</p>
             <div className="projects-actions-container">
               <div style={{ display: 'flex' }}>
                 {actionItems.map(actionItem => this.renderActionItem(actionItem))}
@@ -69,4 +74,4 @@ Dashboard = connect(state => ({
   selectedProject: state.projects.selectedProject,
 }), actions)(Dashboard);
 
-export default Dashboard;
+export default withLocale(Dashboard);

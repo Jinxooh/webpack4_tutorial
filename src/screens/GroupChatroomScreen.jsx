@@ -10,7 +10,7 @@ import { renderField } from 'renderField';
 // actions
 import actions from 'actions';
 // helpers
-import { photoSizeUrl, isFirstChatForDay, dateFormatter, ageFrom } from 'formatHelper';
+import { photoSizeUrl, isFirstChatForDay, dateFormatter, ageFrom } from 'helpers/formatHelper';
 
 export class GroupChatroomScreen extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import {
   OPEN_MODAL,
   SAVE_MODAL,
   UPDATE_MODAL,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 export const modalReducer = (state, action) => {
   const initialValues = { isModalVisible: false, type: '', message: '', error: '', object: undefined, index: undefined };

@@ -6,28 +6,32 @@ import Responsive from '../components/common/Responsive';
 
 
 class CredentialsCreateGroupScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      groupName: '',
-      showOption: false,
-      projectList: [],
-      groupId: null,
-    };
-    this.handleNextButton = this.handleNextButton.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.onChangeClickCheckBox = this.onChangeClickCheckBox.bind(this);
-    this.onChangeClickDiv = this.onChangeClickDiv.bind(this);
-  }
+  state = {
+    groupName: '',
+    showOption: false,
+    projectList: [],
+    groupId: null,
+  };
 
-  componentWillMount() {
+  componentWillMount = () => {
     const { id } = this.props.match.params;
     this.setState({
       groupId: id,
     });
   }
 
-  handleChange(e) {
+  onChangeClickCheckBox = (e, item) => {
+    const { projectList } = this.state;
+    if (e.target.checked) {
+      projectList.push(item);
+    } else {
+      this.setState({
+        projectList: projectList.filter(list => list.id !== item.id),
+      });
+    }
+  }
+
+  handleChange = (e) => {
     this.setState({ groupName: e.target.value });
     if (e.target.value !== '') {
       this.setState({
@@ -40,7 +44,7 @@ class CredentialsCreateGroupScreen extends Component {
     }
   }
 
-  handleNextButton() {
+  handleNextButton = () => {
     const { pushRoute } = this.props;
     const { groupName, projectList } = this.state;
 
@@ -50,31 +54,8 @@ class CredentialsCreateGroupScreen extends Component {
     pushRoute('/credentials/groups');
   }
 
-  onChangeClickCheckBox(e, item) {
-    const { projectList } = this.state;
-    if (e.target.checked) {
-      projectList.push(item);
-    } else {
-      this.setState({
-        projectList: projectList.filter(list => list.id !== item.id),
-      });
-    }
-  }
-
-  onChangeClickDiv(e, item) {
-    const { projectList } = this.state;
-    if (!e.currentTarget.parentElement.children[0].checked) {
-      projectList.push(item);
-    } else {
-      this.setState({
-        projectList: projectList.filter(list => list.id !== item.id),
-      });
-    }
-    e.currentTarget.parentElement.children[0].checked = !e.currentTarget.parentElement.children[0].checked;
-  }
-
   render() {
-    const { handleChange, handleNextButton, onChangeClickCheckBox, onChangeClickDiv } = this;
+    const { handleChange, handleNextButton, onChangeClickCheckBox } = this;
     const { groupName, showOption } = this.state;
     const { projectsList } = this.props;
 
@@ -92,7 +73,7 @@ class CredentialsCreateGroupScreen extends Component {
           </div>
           <div className="input-wrapper">
             <div className="info">
-              Group Name:<upper>*</upper>
+              Group Name:<div>*</div>
             </div>
             <div className="input-box-wrapper">
               <div className="input-box"><input type="text" value={groupName} onChange={handleChange} /><i className="material-icons">remove_circle</i></div>
@@ -114,8 +95,8 @@ class CredentialsCreateGroupScreen extends Component {
                   {
                     projectsList && projectsList.map((item, i) => (
                       <div className="check-box" key={i}>
-                        <input type="checkbox" onChange={e => onChangeClickCheckBox(e, item)} />
-                        <div onClick={e => onChangeClickDiv(e, item)}><strong>{item.name}</strong><br />
+                        <input id={item.id} type="checkbox" onChange={e => onChangeClickCheckBox(e, item)} />
+                        <div><label htmlFor={item.id}><strong>{item.name}</strong></label><br />
                         Enables an <strong>access key ID</strong> and <strong>secret access key</strong> for the AWS API, CLI, SDK, and other development tools.
                         </div>
                       </div>

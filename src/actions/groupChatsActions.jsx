@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { axiosConfig, handleError } from 'serverHelper';
+import { axiosConfig, handleError } from 'helpers/serverHelper';
 import {
   // groupChats
   ADD_GROUP_CHATS,
@@ -13,7 +13,7 @@ import {
   STOP_LOADING,
   COMMON_ERROR,
   OPEN_MODAL,
-} from 'actionTypes';
+} from './actionTypes';
 
 export const postGroupChat = ({ type, parentUid, content, photoUrl, ratio }, callback = () => {}) => async (dispatch, getState) => {
   dispatch({ type: START_LOADING });

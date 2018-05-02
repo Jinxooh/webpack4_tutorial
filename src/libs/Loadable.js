@@ -2,14 +2,14 @@ import React from 'react';
 import L from 'react-loadable';
 
 function Loading() {
-  return <div>Loading...</div>;
+  return <div />;
 }
 
 const Loadable = opts =>
   L({
     loading: Loading,
     dealy: 300,
-    loader: () => opts,
+    ...opts,
   });
 
 export default Loadable;

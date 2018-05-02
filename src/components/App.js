@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Navigation from 'Navigation';
-import Login from 'Login';
-import Modal from 'Modal';
-
 import {
+  Navigation,
+  Login,
+  Modal,
   Apis,
   Automate,
   Campaigns,
@@ -21,10 +20,11 @@ import {
   Intent,
   Flow,
   Dashboard,
-  Credentials,
+  Credentials, CredentialsDashboard,
   CredentialsUsers, CredentialsGroups, CredentialsRoles,
   CredentialsAddUser, CredentialsCreateGroup, CredentialsCreateRole,
   CredentialsRoleSummary, CredentialsGroupSummary, CredentialsUserSummary,
+  Guide,
 } from 'screens';
 
 const App = () => (
@@ -36,10 +36,11 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Dashboard} />
       <Route exact path="/apis" component={Apis} />
-      <Route exact path="/credentials/users" component={CredentialsUsers} />
-      <Route exact path="/credentials/groups" component={CredentialsGroups} />
-      <Route exact path="/credentials/roles" component={CredentialsRoles} />
+      
       <Route exact path="/projects" component={Projects} />
+
+      <Route exact path="/guide" component={Guide} />
+
       <Route exact path="/project/:projectId/automate" component={Automate} />
       <Route exact path="/project/:projectId/automate/intent/:intentId" component={Intent} />
       <Route exact path="/project/:projectId/automate/flow/:flowId" component={Flow} />
@@ -53,6 +54,10 @@ const App = () => (
       <Route exact path="/project/:projectId/products" component={Products} />
       <Route exact path="/project/:projectId/settings" component={ProjectSettings} />
 
+      <Route exact path="/credentials" component={CredentialsDashboard} />
+      <Route exact path="/credentials/users" component={CredentialsUsers} />
+      <Route exact path="/credentials/groups" component={CredentialsGroups} />
+      <Route exact path="/credentials/roles" component={CredentialsRoles} />
       <Route exact path="/credentials/users/addUser" component={CredentialsAddUser} />
       <Route exact path="/credentials/groups/createGroup" component={CredentialsCreateGroup} />
       <Route exact path="/credentials/roles/createRole" component={CredentialsCreateRole} />

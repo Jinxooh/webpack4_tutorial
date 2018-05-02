@@ -3,7 +3,7 @@ import Textarea from 'react-textarea-autosize';
 import { animateScroll, Element, scroller } from 'react-scroll';
 import Rnd from 'react-rnd';
 import { connect } from 'react-redux';
-import actions from '../actions/actions';
+import actions from 'actions';
 import { dateFormatter } from '../helpers/formatHelper';
 
 const uuidv4 = require('uuid/v4');
@@ -114,6 +114,7 @@ class ChatroomsScreen extends Component {
         key={chatroom.id}
         style={style}
         className="chatroom"
+        enableUserSelectHack={false}
         size={{ width: activeChatroom.width, height: activeChatroom.height }}
         position={{ x: activeChatroom.x, y: activeChatroom.y }}
         onDragStart={() => this.props.updateChatroomsMeta({ activeChatroomIndex: index })}

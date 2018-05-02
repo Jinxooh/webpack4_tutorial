@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { axiosConfig, handleError } from 'serverHelper';
+import { axiosConfig, handleError } from 'helpers/serverHelper';
 import {
   // global
   START_LOADING,
@@ -10,7 +10,7 @@ import {
   ADD_PROPERTY,
   ADD_PROPERTIES,
   RESET_PROPERTIES_META,
-} from 'actionTypes';
+} from './actionTypes';
 
 export const setProperty = ({ type, item }, callback = () => {}) => (dispatch) => {
   dispatch({ type: ADD_PROPERTY, payload: { type, item } });

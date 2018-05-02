@@ -1,0 +1,47 @@
+.tag-input {
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  cursor: text;
+  .tag-container {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+
+    input {
+      max-width: 100%;
+      width: 2.2em;
+      border: 0;
+    }
+  }
+
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+
+  max-width: 100%;
+  word-break: break-all;
+
+  margin: .2rem .3rem;
+  padding: .3rem .7rem;
+  font-size: 1em;
+
+  color: rgba(0,0,0,.6);
+  background: wheat;
+
+  i {
+    margin-left: .2rem;
+    font-size: 1rem;
+    font-weight: 700;
+
+    &:active {
+      color: rgba(0,0,0,.3);
+    }
+  }
+}

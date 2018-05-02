@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { axiosConfig, handleError } from 'serverHelper';
+import { axiosConfig, handleError } from 'helpers/serverHelper';
 import {
   // restaurants
   ADD_RESTAURANT,
@@ -10,7 +10,7 @@ import {
   STOP_LOADING,
   COMMON_ERROR,
   OPEN_MODAL,
-} from 'actionTypes';
+} from './actionTypes';
 
 export const setRestaurant = (payload, callback = () => {}) => (dispatch) => {
   dispatch({ type: ADD_RESTAURANT, payload });

@@ -9,7 +9,7 @@ import {
   UPDATE_ITEM_IN_GROUP_CHATROOMS,
   RESET_GROUP_CHATS,
   UPDATE_GROUP_CHATS_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const meta = {
   selectedRoom: {},

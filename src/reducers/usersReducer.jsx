@@ -5,7 +5,7 @@ import {
   ADD_USER,
   ADD_USERS,
   RESET_USERS_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const itemsMeta = {
   orderBy: 'id',

@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'Image';
-import View from 'View';
-import Loading from 'Loading';
+import Image from './Image';
+import View from './View';
+import Loading from './Loading';
 
 export const ImageUpload = (props) => {
   const imageSource = props.source || require('img_placeholder.png');

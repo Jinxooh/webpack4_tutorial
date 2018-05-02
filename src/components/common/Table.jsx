@@ -1,5 +1,5 @@
 import React from 'react';
-import { ageFrom, dateFormatter, numberWithCommas, photoSizeUrl } from 'formatHelper';
+import { ageFrom, dateFormatter, numberWithCommas, photoSizeUrl } from 'helpers/formatHelper';
 
 export const appIconImages = {
   '라이브 설레임愛': require('app_icon_seolleim.png'),

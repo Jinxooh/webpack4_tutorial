@@ -5,7 +5,7 @@ import {
   ADD_RESTAURANTS,
   ADD_RESTAURANT,
   RESET_RESTAURANTS_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const itemsMeta = {
   orderBy: 'id',

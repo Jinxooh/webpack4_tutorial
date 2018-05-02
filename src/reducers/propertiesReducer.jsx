@@ -5,7 +5,7 @@ import {
   ADD_PROPERTY,
   ADD_PROPERTIES,
   RESET_PROPERTIES_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const itemsMeta = {
   orderBy: 'id',

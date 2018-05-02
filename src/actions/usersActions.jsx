@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { axiosConfig, handleError } from 'serverHelper';
+import { axiosConfig, handleError } from 'helpers/serverHelper';
 import {
   // users
   ADD_USER,
@@ -10,7 +10,7 @@ import {
   STOP_LOADING,
   OPEN_MODAL,
   COMMON_ERROR,
-} from 'actionTypes';
+} from './actionTypes';
 
 export const setUser = (payload, callback = () => {}) => (dispatch) => {
   dispatch({ type: ADD_USER, payload });

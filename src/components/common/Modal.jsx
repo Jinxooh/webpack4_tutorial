@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-import { ImageUpload } from 'CommonComponents';
+import { ImageUpload } from './CommonComponents';
 import actions from 'actions';
-import { photoSizeUrl } from 'formatHelper';
+import { photoSizeUrl } from 'helpers/formatHelper';
 
 const titles = {
   addCashLog: '캐시 추가/차감',

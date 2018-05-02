@@ -10,7 +10,7 @@ import { renderField } from 'renderField';
 // actions
 import actions from 'actions';
 // helpers
-import { objectFormatter, photoSizeUrl } from 'formatHelper';
+import { objectFormatter, photoSizeUrl } from 'helpers/formatHelper';
 
 const statuses = {
   listed: '정상',

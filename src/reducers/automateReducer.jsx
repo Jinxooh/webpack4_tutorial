@@ -3,7 +3,7 @@ import {
   ADD_ACCOMMODATION,
   ADD_ACCOMMODATIONS,
   RESET_ACCOMMODATIONS_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const itemsMeta = {
   orderBy: 'id',

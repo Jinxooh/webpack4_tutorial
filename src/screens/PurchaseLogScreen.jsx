@@ -9,7 +9,7 @@ import { renderField } from 'renderField';
 // actions
 import actions from 'actions';
 // helpers
-import { objectFormatter } from 'formatHelper';
+import { objectFormatter } from 'helpers/formatHelper';
 
 const types = {
   inApp: '인앱결제',

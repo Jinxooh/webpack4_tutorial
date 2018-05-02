@@ -1,5 +1,5 @@
 import React from 'react';
-import { photoSizeUrl, ageFrom, numberWithCommas } from 'formatHelper';
+import { photoSizeUrl, ageFrom, numberWithCommas } from 'helpers/formatHelper';
 
 const statuses = {
   subscribed: '정회원',

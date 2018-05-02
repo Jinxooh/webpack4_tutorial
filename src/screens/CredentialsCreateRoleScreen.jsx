@@ -84,7 +84,7 @@ class CredentialsCreateRoleScreen extends Component {
           </div>
           <div className="input-wrapper">
             <div className="info">
-              Role Name:<upper>*</upper>
+              Role Name:<div>*</div>
             </div>
             <div className="input-box-wrapper">
               <div className="input-box"><input type="text" value={roleName} onChange={handleChange} /><i className="material-icons">remove_circle</i></div>

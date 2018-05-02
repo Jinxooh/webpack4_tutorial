@@ -1,4 +1,4 @@
-import { UNAUTH_ADMIN, STOP_LOADING, OPEN_MODAL } from 'actionTypes';
+import { UNAUTH_ADMIN, STOP_LOADING, OPEN_MODAL } from './actionTypes';
 import { push } from 'react-router-redux';
 
 export const handleError = (actionType, error, dispatch) => {

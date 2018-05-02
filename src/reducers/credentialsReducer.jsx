@@ -1,6 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
 import produce from 'immer';
-import { List, Record } from 'immutable';
 
 const ADD_DATA = 'credentials/ADD_DATA';
 const CHANGE_INPUT = 'credentials/CHANGE_INPUT';

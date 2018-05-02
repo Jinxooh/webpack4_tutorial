@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import { animateScroll } from 'react-scroll';
 import actions from 'actions';
 import { renderField } from 'renderField';
-import { photoSizeUrl, ageFrom, numberWithCommas, objectFormatter } from 'formatHelper';
+import { photoSizeUrl, ageFrom, numberWithCommas, objectFormatter } from 'helpers/formatHelper';
 
 const statuses = {
   subscribed: '정회원',

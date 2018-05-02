@@ -49,8 +49,8 @@ class SummaryContainer extends Component {
         <TabList>
           { config[type] && config[type].map((val, idx) => <Tab key={idx}>{val}</Tab>)}
         </TabList>
-        { config[type] && config[type].map((val, idx) => {
-          return (<TabPanel key={idx}>
+        { config[type] && config[type].map((val, idx) => (
+          <TabPanel key={idx}>
             <table>
               <thead>
                 <tr>
@@ -74,8 +74,8 @@ class SummaryContainer extends Component {
                 })}
               </tbody>
             </table>
-          </TabPanel>);
-        })}
+          </TabPanel>),
+        )}
       </Tabs>
     );
 

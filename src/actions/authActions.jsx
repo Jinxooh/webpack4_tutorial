@@ -1,9 +1,9 @@
 /* jshint esversion: 6 */
 import axios from 'axios';
-import { baseURL, authHeaders } from 'httpRequestHelper';
+import { baseURL, authHeaders } from 'helpers/httpRequestHelper';
 import { push } from 'react-router-redux';
-import { handleError } from 'actionHelpers';
-import { AUTH_ADMIN, UNAUTH_ADMIN } from 'actionTypes';
+import { handleError } from 'actions/actionHelpers';
+import { AUTH_ADMIN, UNAUTH_ADMIN } from 'actions/actionTypes';
 
 export function loginWithId({ userId, password }) {
   return (dispatch) => {

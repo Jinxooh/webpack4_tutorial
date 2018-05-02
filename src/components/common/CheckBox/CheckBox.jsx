@@ -7,10 +7,10 @@ const CheckBox = ({
   return (
     <div className="check-box" key={key}>
       <div>
-        <input type="checkbox" name={name} onChange={e => onChange(e, item)} />
+        <input id={item.id} type="checkbox" name={name} onChange={e => onChange(e, item)} />
       </div>
       <div>
-        <strong>{name}</strong>
+        <label htmlFor={item.id}><strong>{name}</strong></label>
       </div>
     </div>
   );

@@ -91,7 +91,7 @@ class CredentialsAddUserScreen extends Component {
           </div>
           <div className="input-wrapper">
             <div className="info">
-              User name<upper>*</upper>
+              User name<div>*</div>
             </div>
             <div className="input-box-wrapper">
               <div className="input-box"><input type="text" value={userName} onChange={handleChange} /><i className="material-icons">remove_circle</i></div>

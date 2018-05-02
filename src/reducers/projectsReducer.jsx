@@ -1,7 +1,7 @@
 import {
   SELECT_PROJECT,
   UPDATE_PROJECT_MENU
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const initialValues = {
   list: [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { photoSizeUrl } from 'formatHelper';
+import { photoSizeUrl } from 'helpers/formatHelper';
 
 const disabledFields = ['id', 'createdAt', 'updatedAt', 'deletedAt', 'point', 'cash', 'totalPoint', 'totalCash', 'purchasedItem', 'price', 'type', 'duration', 'endedAt', 'startedAt', 'canceledAt', 'acceptedAt', 'declinedAt', 'lastActivityAt'];
 

@@ -5,7 +5,7 @@ import {
   START_LOADING,
   STOP_LOADING,
   TOGGLE_PROJECT_MENU_ITEM,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 
 const extraHeaderTitles = [{

@@ -1,5 +1,5 @@
-import { encodeBase64 } from 'cryptHelper';
-import { UNAUTH_ADMIN, STOP_LOADING, OPEN_MODAL } from 'actionTypes';
+import { encodeBase64 } from 'helpers/cryptHelper';
+import { UNAUTH_ADMIN, STOP_LOADING, OPEN_MODAL } from 'actions/actionTypes';
 import { push } from 'react-router-redux';
 
 export const handleError = (actionType, error, dispatch) => {

@@ -1,1 +1,6 @@
-# webpack4_tutorial
+# std console react
+
+- how to start
+
+> npm start
+  

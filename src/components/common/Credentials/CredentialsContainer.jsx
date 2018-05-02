@@ -56,8 +56,8 @@ class CredentialsContainer extends Component {
 
     const credentialsConfigs = {
       users: {
-        columTitles: ['User name', 'SID', 'Created Date', 'Modified Date', 'In Use', 'Logs'],
-        columTitleNames: ['username', 'sid', 'createdDate', 'modifiedDate', 'inuse', 'logs'],
+        columTitles: ['User Name', 'SID', 'Created Date', 'Modified Date', 'In Use', 'Logs'],
+        columTitleNames: ['userName', 'sid', 'createdDate', 'modifiedDate', 'inuse', 'logs'],
         leftSide: (
           <div className="left-side">
             <CredentialsButtons type="addUser" onClick={() => pushRoute(`${defaultRoute}/addUser`)} />
@@ -114,7 +114,9 @@ class CredentialsContainer extends Component {
       },
     };
 
-    const { leftSide, rightSide, columTitles, columTitleNames } = credentialsConfigs[type];
+    const {
+      leftSide, rightSide, columTitles, columTitleNames,
+    } = credentialsConfigs[type];
 
     return (
       <Responsive>

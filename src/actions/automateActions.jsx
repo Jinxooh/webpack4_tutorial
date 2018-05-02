@@ -1,4 +1,4 @@
-import { UPDATE_PROJECT_MENU } from 'actionTypes';
+import { UPDATE_PROJECT_MENU } from './actionTypes';
 
 export const addIntent = ({ menu }) => async (dispatch, getState) => {
   try {

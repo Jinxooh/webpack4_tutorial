@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { push } from 'react-router-redux';
-import { resizeImage } from 'formatHelper';
-import { axiosConfig, handleError } from 'serverHelper';
+import { resizeImage } from 'helpers/formatHelper';
+import { axiosConfig, handleError } from 'helpers/serverHelper';
 import {
   TOGGLE_MENU,
   TOGGLE_FILTER,
@@ -11,7 +11,7 @@ import {
   STOP_LOADING,
   COMMON_ERROR,
   TOGGLE_PROJECT_MENU_ITEM,
-} from 'actionTypes';
+} from './actionTypes';
 
 export const toggleProjectMenuItem = (value, index) => dispatch => dispatch({ type: TOGGLE_PROJECT_MENU_ITEM, payload: { value, index } });
 

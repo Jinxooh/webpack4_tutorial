@@ -6,7 +6,7 @@ import {
   REMOVE_ITEM_IN_ACTIVE_CHATROOM_LIST,
   UPDATE_CHATROOMS_META,
   UPDATE_ITEM_IN_ACTIVE_CHATROOM_LIST,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const meta = {
   selectedRoom: {},

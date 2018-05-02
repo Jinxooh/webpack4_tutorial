@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import actions from 'actions';
-import Header from 'Header';
+import Header from './Header';
 // import SideBar from 'SideBar';
 
 class Navigation extends Component {
@@ -37,7 +37,6 @@ class Navigation extends Component {
     if (!this.props.authenticated) return <div />;
     const { pathname } = this.props.location;
     // const pathnames = pathname.split('/');
-    console.log('pathname', pathname);
     // const headerVisible = pathnames.length > 1 && pathnames[1].toLowerCase() === 'project';
     const headerVisible = true;
     // const sidebarVisible = pathname.split('/').length > 2;

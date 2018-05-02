@@ -10,7 +10,6 @@ export function deepMap(children, callback) {
     // null happens when conditionally rendering TabPanel/Tab
     // see https://github.com/reactjs/react-tabs/issues/37
     if (child === null) return null;
-
     if (isTabChild(child)) {
       return callback(child);
     }

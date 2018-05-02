@@ -6,6 +6,7 @@ import App from 'components/App';
 
 import store from 'store';
 import { history } from 'store/configureStore';
+import 'libs/fontawesome'; // add fontawesome font icons
 
 const Root = () => (
   <Provider store={store}>

@@ -3,7 +3,7 @@ import {
   OPEN_MODAL,
   SAVE_MODAL,
   UPDATE_MODAL,
-} from 'actionTypes';
+} from './actionTypes';
 
 export function setInitialValues(values) {
   return (dispatch) => {
@@ -22,6 +22,7 @@ export function openModal(modal) {
     dispatch({ type: OPEN_MODAL, payload: modal });
   };
 }
+
 export function saveModal() {
   return (dispatch) => {
     dispatch({ type: SAVE_MODAL });

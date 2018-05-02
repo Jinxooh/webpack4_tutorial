@@ -3,7 +3,7 @@ import {
   ADD_PURCHASE_LOG,
   ADD_PURCHASE_LOGS,
   RESET_PURCHASE_LOGS_META,
-} from 'actionTypes';
+} from 'actions/actionTypes';
 
 const itemsMeta = {
   orderBy: 'id',
